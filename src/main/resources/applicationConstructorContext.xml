@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myFirstBean" class="com.constructorInjection.Employee">
+        <property name="employeeId" value="12345" />
+        <property name="job" value="developer" />
+    </bean>
+
+    <bean id="personBean" class="com.constructorInjection.Person">
+        <constructor-arg ref="myFirstBean" />
+    </bean>
+</beans>
